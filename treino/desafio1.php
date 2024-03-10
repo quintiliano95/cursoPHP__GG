@@ -17,16 +17,15 @@
         <h1>SEJA BEM-VINDO!</h1>
     </header>
     <main>
+        <h1>Resultado Final</h1>
         <?php
-            // var_dump($_REQUEST);  // $Request é a junção de $_GET, $_POST E $_COOKIES
-            $nome = $_GET["nome"] ?? "Pessoa"; // A interrogação é para setar um nome default
-            $sobrenome = $_GET["sobrenome"] ?? "Desconhecida"; // A interrogação é para setar um sobrenome default
-            echo "<p>Seja bem vindo ao meu site, <strong> $nome $sobrenome</strong>! <br></p>";
-            // echo 50/2+3**2;
-            // $r = base_convert(254, 10, 8);
-            // echo $r;
-            // $c = "2" + "2";
-            // echo $c;
+            $numero = (int) $_GET["numero"];
+            $antecessor = $numero - 1;
+            $sucessor = $numero + 1;
+
+            echo "O número escolhido foi $numero <br>";
+            echo "O número antecessor é $antecessor <br>";
+            echo "O número sucessor é $sucessor";
         ?>
         <p><a href="javascript:history.go(-1)">Voltar</a></p>
     </main>
