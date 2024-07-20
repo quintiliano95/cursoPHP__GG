@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama de Entidade de Relacionamento (DER)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .diagram-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagram-container">
+        <svg width="900" height="600">
+            <!-- Cliente -->
+            <rect x="50" y="50" width="200" height="150" fill="lightblue" stroke="black"/>
+            <text x="150" y="70" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Cliente</text>
+            <text x="150" y="90" font-family="Arial" font-size="12" text-anchor="middle">id</text>
+            <text x="150" y="110" font-family="Arial" font-size="12" text-anchor="middle">numero_ficha</text>
+            <text x="150" y="130" font-family="Arial" font-size="12" text-anchor="middle">nome_completo</text>
+            <text x="150" y="150" font-family="Arial" font-size="12" text-anchor="middle">cpf</text>
+            <text x="150" y="170" font-family="Arial" font-size="12" text-anchor="middle">num_doc_identidade</text>
+
+            <!-- Foto -->
+            <rect x="300" y="50" width="200" height="100" fill="lightgreen" stroke="black"/>
+            <text x="400" y="70" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Foto</text>
+            <text x="400" y="90" font-family="Arial" font-size="12" text-anchor="middle">id</text>
+            <text x="400" y="110" font-family="Arial" font-size="12" text-anchor="middle">cliente_id</text>
+            <text x="400" y="130" font-family="Arial" font-size="12" text-anchor="middle">caminho_foto</text>
+
+            <!-- Biometria -->
+            <rect x="300" y="200" width="200" height="150" fill="lightyellow" stroke="black"/>
+            <text x="400" y="220" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Biometria</text>
+            <text x="400" y="240" font-family="Arial" font-size="12" text-anchor="middle">id</text>
+            <text x="400" y="260" font-family="Arial" font-size="12" text-anchor="middle">cliente_id</text>
+            <text x="400" y="280" font-family="Arial" font-size="12" text-anchor="middle">caminho_mao_direita</text>
+            <text x="400" y="300" font-family="Arial" font-size="12" text-anchor="middle">caminho_mao_esquerda</text>
+
+            <!-- DocumentoApresentado -->
+            <rect x="300" y="400" width="200" height="100" fill="lightcoral" stroke="black"/>
+            <text x="400" y="420" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">DocumentoApresentado</text>
+            <text x="400" y="440" font-family="Arial" font-size="12" text-anchor="middle">id</text>
+            <text x="400" y="460" font-family="Arial" font-size="12" text-anchor="middle">cliente_id</text>
+            <text x="400" y="480" font-family="Arial" font-size="12" text-anchor="middle">caminho_documento</text>
+
+            <!-- Lines -->
+            <line x1="250" y1="100" x2="300" y2="100" stroke="black" />
+            <line x1="250" y1="125" x2="300" y2="225" stroke="black" />
+            <line x1="250" y1="150" x2="300" y2="450" stroke="black" />
+        </svg>
+    </div>
+</body>
+</html>

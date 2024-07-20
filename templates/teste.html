@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incluir Cliente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            border: 1px solid #000;
+            padding: 20px;
+            width: 400px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group .biometria-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-group .biometria-group input[type="file"] {
+            width: 48%;
+        }
+        .form-actions {
+            text-align: center;
+        }
+        .form-actions input[type="submit"],
+        .form-actions input[type="button"] {
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Incluir Cliente</h2>
+        <form action="processar_cadastro.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nome-completo">Nome Completo:</label>
+                <input type="text" id="nome-completo" name="nome-completo" required>
+            </div>
+            <div class="form-group">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required>
+            </div>
+            <div class="form-group">
+                <label for="num-doc-id">Num. Doc. ID:</label>
+                <input type="text" id="num-doc-id" name="num-doc-id" required>
+            </div>
+            <div class="form-group">
+                <label for="foto">Foto:</label>
+                <input type="file" id="foto" name="foto" required>
+            </div>
+            <div class="form-group">
+                <label>Biometria:</label>
+                <div class="biometria-group">
+                    <input type="file" id="mao-direita" name="mao-direita" required>
+                    <input type="file" id="mao-esquerda" name="mao-esquerda" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="foto-documento">Foto Documento:</label>
+                <input type="file" id="foto-documento" name="foto-documento" required>
+            </div>
+            <div class="form-actions">
+                <input type="submit" value="Salvar">
+                <input type="button" value="Cancelar" onclick="window.location.href='index.html'">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

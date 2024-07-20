@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama de Caso de Uso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .diagram-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagram-container">
+        <svg width="800" height="600">
+            <!-- Usuário do Sistema -->
+            <rect x="300" y="20" width="200" height="50" fill="lightgray" stroke="black"/>
+            <text x="400" y="50" font-family="Arial" font-size="12" text-anchor="middle">Usuário do Sistema</text>
+
+            <!-- Incluir Cliente -->
+            <rect x="150" y="100" width="100" height="50" fill="white" stroke="black"/>
+            <text x="200" y="130" font-family="Arial" font-size="12" text-anchor="middle">Incluir Cliente</text>
+
+            <!-- Alterar Cliente -->
+            <rect x="350" y="100" width="100" height="50" fill="white" stroke="black"/>
+            <text x="400" y="130" font-family="Arial" font-size="12" text-anchor="middle">Alterar Cliente</text>
+
+            <!-- Excluir Cliente -->
+            <rect x="550" y="100" width="100" height="50" fill="white" stroke="black"/>
+            <text x="600" y="130" font-family="Arial" font-size="12" text-anchor="middle">Excluir Cliente</text>
+
+            <!-- Consultar Cliente -->
+            <rect x="350" y="200" width="100" height="50" fill="white" stroke="black"/>
+            <text x="400" y="230" font-family="Arial" font-size="12" text-anchor="middle">Consultar Cliente</text>
+
+            <!-- Consultar por Nome -->
+            <rect x="200" y="300" width="100" height="50" fill="white" stroke="black"/>
+            <text x="250" y="330" font-family="Arial" font-size="12" text-anchor="middle">Por Nome</text>
+
+            <!-- Consultar por CPF -->
+            <rect x="500" y="300" width="100" height="50" fill="white" stroke="black"/>
+            <text x="550" y="330" font-family="Arial" font-size="12" text-anchor="middle">Por CPF</text>
+
+            <!-- Consultar Foto -->
+            <rect x="150" y="400" width="100" height="50" fill="white" stroke="black"/>
+            <text x="200" y="430" font-family="Arial" font-size="12" text-anchor="middle">Consultar Foto</text>
+
+            <!-- Consultar Documento Apresentado -->
+            <rect x="300" y="400" width="250" height="50" fill="white" stroke="black"/>
+            <text x="425" y="430" font-family="Arial" font-size="12" text-anchor="middle">Consultar Documento Apresentado</text>
+
+            <!-- Consultar Biometria -->
+            <rect x="590" y="400" width="120" height="50" fill="white" stroke="black"/>
+            <text x="650" y="430" font-family="Arial" font-size="12" text-anchor="middle">Consultar Biometria</text>
+
+            <!-- Lines -->
+            <line x1="400" y1="70" x2="200" y2="100" stroke="black" />
+            <line x1="400" y1="70" x2="400" y2="100" stroke="black" />
+            <line x1="400" y1="70" x2="600" y2="100" stroke="black" />
+            <line x1="400" y1="150" x2="400" y2="200" stroke="black" />
+            <line x1="400" y1="250" x2="250" y2="300" stroke="black" />
+            <line x1="400" y1="250" x2="600" y2="300" stroke="black" />
+            <line x1="250" y1="350" x2="200" y2="400" stroke="black" />
+            <line x1="550" y1="350" x2="400" y2="400" stroke="black" />
+            <line x1="550" y1="350" x2="650" y2="400" stroke="black" />
+        </svg>
+    </div>
+</body>
+</html>
